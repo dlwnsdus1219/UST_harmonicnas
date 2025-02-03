@@ -57,7 +57,7 @@ def ofa_specialized(net_id, pretrained=True):
         net.load_state_dict(init)
     return net, image_size
 
-
+## 내부 net_id에 따라 백본 네트워크 구조 자동 설정 => 이후 최적의 조합을 찾는다!!
 def ofa_net(net_id, model_dir=".torch/ofa_nets", resolution=224, pretrained=True, in_ch=3, _type='orig'):
     if net_id == "ofa_mbv3_d234_e346_k357_w1.0":
         net = OFAMobileNetV3(
@@ -70,6 +70,7 @@ def ofa_net(net_id, model_dir=".torch/ofa_nets", resolution=224, pretrained=True
             expand_ratio_list=[3, 4, 6],
             depth_list=[2, 3, 4],
         )
+    
     elif net_id == "ofa_mbv3_d234_e346_k357_w1.2":
         net = OFAMobileNetV3(
             _type= _type,

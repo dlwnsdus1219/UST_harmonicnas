@@ -1,10 +1,10 @@
-## AV-MNIST 데이터셋 활용하여 MM-NN 설계하기 위한 탐색 알고리즘(feat. Evolutionary Algorithm)
+## AV-MNIST 데이터셋 활용하여 MM-NN 설계하기 위한 탐색 알고리즘(Search Algorithm)
 import argparse  # 명령행 인자 처리
 import random
 import math
 import pickle   # 객체 직렬화 및 역직렬화
 
-import wandb
+from utils.wandb_utils import init_wandb
 
 import torch
 import torch.distributed as dist
@@ -25,6 +25,19 @@ from evaluate.backbone_eval.efficiency import EfficiencyEstimator
 from data.data_loader import build_data_loader
 from datetime import datetime
 import os
+
+# ## Sweep용 설정 파일 지정
+# config_path = './config/sweep_config.yml'
+
+# ## WandB 초기화 & 설정 불러오기
+# wandb_config = init_wandb(config_path)
+
+# # 기존 args 객체에 WandB 값 반영
+# args = setup(config_path)
+# for key, value in wandb_config.items():
+#     setattr(args, key, value)
+
+# print(f"Updated Config for Sweep: {args}")
 
 directory = os.path.dirname(os.path.abspath(__name__))
 directory = "../Harmonic-NAS"
@@ -85,7 +98,8 @@ def eval_worker(gpu, ngpus_per_node, args):
     image_supernet.load_weights_from_pretrained_supernet(args.pretrained_path1)
     sound_supernet.load_weights_from_pretrained_supernet(args.pretrained_path2)
     # comm.synchronize()
-        
+    
+
     # 진화 알고리즘의 초기 단계
     if(args.resume_evo == 0): # 첫 세대부터 새로운 탐색 시작!!(진화 알고리즘 탐색)
         parent_ooe_popu = []
@@ -97,10 +111,8 @@ def eval_worker(gpu, ngpus_per_node, args):
             couple = {'backbone1': parent_ooe_popu1[idx], 'backbone2': parent_ooe_popu2[idx], 'net_id': f'net_evo_0_{idx}'}
             parent_ooe_popu.append(couple)      # 각 백본 개체의 정보를 저장한다!!
         args.start_evo = 0
-        save_ooe_population(directory, 0, parent_ooe_popu, exp_name)    # 첫 번째 세대 지정하여, 이후에 이어서 학습 되게끔!!
+        save_ooe_population(directory, 0, parent_ooe_popu, exp_name)    # 첫 번째 세대 지정하여, 이후에 이어서 학습 되게끔!
 
-        
-    
     # 저장된 population 로드 후 탐색 재개!!
     else:
         print('Resuming from population', args.start_evo)
@@ -157,17 +169,17 @@ def eval_worker(gpu, ngpus_per_node, args):
         # 다음 단계 위한 융합 네트워크를 구성한다.
         parent_ooe_popu = []
         for i in range(len(backbones1)):
-            id = f'net_evo_{evo_outer}_{i}'  # GPU 순위 제거
-            b1 = backbones1[i]
-            b2 = backbones2[i]
+            id = f'net_evo_{evo_outer}_{i}'  # 개체의 고유 ID 생성
+            b1 = backbones1[i]      # 이미지 모달리티 백본
+            b2 = backbones2[i]      # 사운드 모달리티 백본
             b1['net_id'] = id
             b2['net_id'] = id
             
             # Exploring the fusion network macro-architecure
             steps = 2          # the number of fusions cells 
             node_steps = 1     # the number of fusion operators inside the cell 
-            steps_candidates = [1, 3, 4]
-            node_steps_candidates = [2, 3, 4]
+            steps_candidates = [1, 3, 4]        # Fusion Cell 개수의 후보
+            node_steps_candidates = [2, 3, 4]   # 각 Fusion Cell 내에서 수행될 Operator의 개수
             
             if(random.random() < 0.4):
                 steps = random.choice(steps_candidates)  
@@ -179,11 +191,11 @@ def eval_worker(gpu, ngpus_per_node, args):
             couple = {'backbone1': b1, 
                       'backbone2': b2, 
                       'net_id': id, 
-                      'steps': steps, 
-                      'node_steps': node_steps}
+                      'steps': steps,           # Fusion Cell이 몇 개?
+                      'node_steps': node_steps  # Fusion Operator가 몇 개?(각 Cell 별로)
+                      }
             parent_ooe_popu.append(couple)
             
-        # comm.synchronize()
 
         print(f"Evolution {evo_outer} Len MM-Population before the fusion {len(parent_ooe_popu)}")
         print("###################################################")
@@ -274,16 +286,19 @@ def eval_worker(gpu, ngpus_per_node, args):
         for idx in range(args.evo_search_outer.crossover_size):
             if len(parent_ooe_popu) >= args.evo_search_outer.parent_popu_size:
                 break  # 초과 방지
-            cfg1 = random.choice(survivals_ooe)
+            ## 상위 개체에서 2개의 부모 선택!!
+            cfg1 = random.choice(survivals_ooe)     
             cfg2 = random.choice(survivals_ooe)
             # print("config 1",cfg1)
+
+            ## 부모 개체의 백본 네트워크 정보 교차!!
             cfg_backbone1 = image_supernet.crossover_and_reset1(cfg1['backbone1'], 
                                                                        cfg2['backbone1'], 
                                                                        crx_prob=args.evo_search_outer.crossover_prob)
             cfg_backbone2 = image_supernet.crossover_and_reset1(cfg1['backbone2'], 
                                                                        cfg2['backbone2'], 
                                                                        crx_prob=args.evo_search_outer.crossover_prob)
-            cfg = {'backbone1': cfg_backbone1, 'backbone2': cfg_backbone2}   
+            cfg = {'backbone1': cfg_backbone1, 'backbone2': cfg_backbone2}      # 새로운 백본 NETWORK 생성!!
             parent_ooe_popu.append(cfg)
 
         # Mutation  (변이 알고리즘)
@@ -316,10 +331,24 @@ def eval_worker(gpu, ngpus_per_node, args):
 
         
 if __name__ == '__main__':
+    # Sweep용 설정 파일 지정
+    config_path = './config/sweep_config.yml'
+
+    # WandB 초기화 및 설정 불러오기
+    wandb_config = init_wandb(config_path)
+
     args = setup(run_args.config_file)      # args 객체 내에 하이퍼 파라미터, 데이터 경로, 네트워크 설정 등 불러옴
     args.resume_evo = run_args.resume_evo
     args.start_evo = run_args.start_evo
     args.net = run_args.net
+
+    # wandb_config 에 있는 값만 기존 args에 덮어쓰기
+    for key, value in wandb_config.items():
+        if hasattr(args, key):  # 기존 args에 있는 키만 업데이트
+            setattr(args, key, value)
+
+    print(f"Updated Config for Sweep: {args}")
+
 
     # GPU 설정
     if torch.cuda.is_available():

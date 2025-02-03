@@ -1,0 +1,31 @@
+program: search_algo_avmnist.py  # NAS 검색 알고리즘 실행 파일
+method: bayes  # 탐색 방식 (grid, random, bayes)
+metric:
+  name: accuracy  # 성능 평가 기준
+  goal: maximize  # 높은 accuracy를 목표로 탐색
+
+parameters:
+  mutate_prob:
+    values: [0.3, 0.4, 0.5]
+  crossover_prob:
+    values: [0.7, 0.8, 0.9]
+  parent_popu_size:
+    values: [8, 16, 32]
+  fusion_epochs:
+    values: [20, 30, 50]
+  fusion_epochs:
+    values: [10, 25, 50]
+  arch_learning_rate:
+    values: [0.0001, 0.0003, 0.001]
+
+# parameters:
+#   batch_size:
+#     values: [128, 256]
+#   learning_rate:
+#     values: [0.0003, 0.001, 0.01]
+#   parent_popu_size:
+#     values: [8, 16, 32]
+#   fusion_epochs:
+#     values: [10, 25, 50]
+#   optimizer:
+#     values: ["adam", "sgd"]

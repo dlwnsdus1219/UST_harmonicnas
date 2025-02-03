@@ -12,21 +12,23 @@ fusion_lut: None
 
 
 # Search hyperparameters
+## 백본 네트워크의 탐색 담당
 evo_search_outer:
     parent_popu_size: 8
     survival_ratio: .5
     mutate_size: 64
     crossover_size: 64
-    mutate_prob: 0.4
-    crossover_prob: 0.8
-    evo_iter: 30
+    mutate_prob: 0.4        # 변이 확률
+    crossover_prob: 0.8     # 교차 확률
+    evo_iter: 30            # 진화 알고리즘 몇 번 반복?
 
+## 선택된 백본 중, 상위 개체만 다시 한 번 필터링!!
 evo_search_inner:
     survival_ratio: 0.25
 
 
 # Fusion search parameters
-fusion_epochs: 25
+fusion_epochs: 25       # 융합 학습은 몇 번?
 
 C : 192
 L : 16
@@ -40,10 +42,10 @@ drpt : 0.1
 # num_input_nodes : 8
 num_keep_edges : 2
 
-arch_learning_rate : 0.0003
+arch_learning_rate : 0.0003     # 학습률 => 얘는 반드시 WandB 적용 ㄱㄱ
 arch_weight_decay : 0.001
 
-weight_decay : 0.0001
+weight_decay : 0.0001       # weight decay: L2 정규화 + 과적합 방지 
 eta_max : 0.0001 
 eta_min : 0.000001
 Ti : 1

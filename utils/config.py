@@ -103,15 +103,15 @@ class AttrDict(dict):
                 ret_str.append('{}: {}'.format(key, value))
         return '\n'.join(ret_str)
 
-
+## args 파일 내에서 그대로 파라미터 가져다가 객체화..!!
 class Config(AttrDict):
-
+    
     def __init__(self, filename=None):
         with open(filename, 'r') as f:
             cfg_dict = yaml.load(f, Loader)
         super(Config, self).__init__(cfg_dict)
 
-
+## .yml 파일 로드 후 Config 객체로 변환 ㄱㄱ
 def setup(config_file):
     assert os.path.isfile(config_file), 'cannot locate {}'.format(config_file)
     return Config(config_file)
