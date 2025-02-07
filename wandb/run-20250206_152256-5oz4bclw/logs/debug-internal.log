@@ -1,0 +1,7 @@
+{"time":"2025-02-06T15:22:57.014184587+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.5","symlink path":"/home/etri01/jy/harmonicnas/HNAS_AVMNIST/wandb/run-20250206_152256-5oz4bclw/logs/debug-core.log"}
+{"time":"2025-02-06T15:22:57.117095326+09:00","level":"INFO","msg":"created new stream","id":"5oz4bclw"}
+{"time":"2025-02-06T15:22:57.117120879+09:00","level":"INFO","msg":"stream: started","id":"5oz4bclw"}
+{"time":"2025-02-06T15:22:57.117145373+09:00","level":"INFO","msg":"handler: started","stream_id":"5oz4bclw"}
+{"time":"2025-02-06T15:22:57.117148731+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"5oz4bclw"}
+{"time":"2025-02-06T15:22:57.117194495+09:00","level":"INFO","msg":"sender: started","stream_id":"5oz4bclw"}
+{"time":"2025-02-06T15:22:57.42018665+09:00","level":"INFO","msg":"Starting system monitor"}

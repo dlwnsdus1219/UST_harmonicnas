@@ -1,0 +1,1 @@
+{"crossover_prob":0.8,"mutate_prob":0.4,"best_accuracy":85.55555555555556,"num_parents_survived":2,"evolution_iteration":0,"_step":0,"num_children_generated":6,"_timestamp":1.7386418206631498e+09,"num_fusion_networks":8,"_runtime":29.884644555,"_wandb":{"runtime":29},"num_backbones_selected":8,"avg_accuracy":60.19444444444444}

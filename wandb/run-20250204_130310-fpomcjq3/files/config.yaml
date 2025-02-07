@@ -1,0 +1,190 @@
+_wandb:
+    value:
+        cli_version: 0.19.5
+        m: []
+        python_version: 3.8.10
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 53
+                - 55
+                - 100
+            "2":
+                - 1
+                - 5
+                - 41
+                - 53
+                - 55
+                - 100
+            "3":
+                - 13
+                - 23
+                - 55
+            "4": 3.8.10
+            "5": 0.19.5
+            "8":
+                - 5
+            "12": 0.19.5
+            "13": linux-x86_64
+C:
+    value: 192
+L:
+    value: 16
+Ti:
+    value: 1
+Tm:
+    value: 2
+alpha_max:
+    value: 1
+alpha_min:
+    value: -1
+arch:
+    value: supernet_dynamic_model
+arch_learning_rate:
+    value: 0.0003
+arch_weight_decay:
+    value: 0.001
+augment:
+    value: auto_augment_tf
+batch_size:
+    value: 256
+batch_size_per_gpu:
+    value: 256
+bn_calibration:
+    value: false
+bn_eps:
+    value: "1e-5"
+bn_momentum:
+    value: 0
+data_loader_workers_per_gpu:
+    value: 4
+dataset:
+    value: avmnist
+dataset_dir:
+    value: /home/etri01/jy/harmonicnas/Harmonic-NAS/soundmnist/
+distributed:
+    value: false
+distributed_val:
+    value: false
+drop_connect:
+    value: 0.2
+drop_connect_only_last_two_stages:
+    value: true
+drop_last:
+    value: true
+dropout:
+    value: 0.2
+drpt:
+    value: 0.1
+epochs:
+    value: 50
+eta_max:
+    value: 0.0001
+eta_min:
+    value: 1e-06
+eval_only:
+    value: true
+evo_search_inner:
+    value:
+        survival_ratio: 0.25
+evo_search_outer:
+    value:
+        crossover_prob: 0.8
+        crossover_size: 64
+        evo_iter: 30
+        mutate_prob: 0.4
+        mutate_size: 64
+        parent_popu_size: 8
+        survival_ratio: 0.5
+exp_name:
+    value: unimodal_supernet_avmnist_image
+fusion_epochs:
+    value: 25
+fusion_lut:
+    value: None
+grad_clip_value:
+    value: 1
+hw_lut_path:
+    value: None
+image_resolution:
+    value: 28
+in_channels:
+    value: 1
+inplace_distill:
+    value: false
+iw_clip:
+    value: 5
+label_smoothing:
+    value: 0.1
+lr_scheduler:
+    value:
+        base_lr: 1e-05
+        clamp_lr_percent: 0
+        method: warmup_cosine_lr
+memory_per_node:
+    value: 128g
+multiplier:
+    value: 2
+multiprocessing_distributed:
+    value: true
+n_classes:
+    value: 10
+n_cpu_per_node:
+    value: 32
+n_gpu_per_node:
+    value: 8
+node_multiplier:
+    value: 1
+num_arch_training:
+    value: 4
+num_keep_edges:
+    value: 2
+num_nodes:
+    value: 8
+num_outputs:
+    value: 10
+optimizer:
+    value:
+        method: adam
+        momentum: 0.9
+        nesterov: true
+parallel:
+    value: false
+post_bn_calibration_batch_num:
+    value: 64
+pretrained_path1:
+    value: ./saved_supernets/AV-MNIST/supernet_avmnist_image.pth.tar
+pretrained_path2:
+    value: ./saved_supernets/AV-MNIST/supernet_avmnist_sound.pth.tar
+print_freq:
+    value: 50
+resume:
+    value: ""
+sandwich_rule:
+    value: true
+save:
+    value: best_fusion_avmnist
+seed:
+    value: 42
+small_dataset:
+    value: false
+sound_resolution:
+    value: 20
+start_epoch:
+    value: 0
+supernet_arch:
+    value: ofa
+sync_bn:
+    value: false
+task:
+    value: classification
+warmup_epochs:
+    value: 5
+weight_decay:
+    value: 0.0001
+weight_decay_bn_bias:
+    value: 0
+weight_decay_weight:
+    value: 0.0001

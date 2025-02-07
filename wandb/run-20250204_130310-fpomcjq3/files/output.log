@@ -1,0 +1,141 @@
+Updated Config: small_dataset: False
+pretrained_path1: ./saved_supernets/AV-MNIST/supernet_avmnist_image.pth.tar
+pretrained_path2: ./saved_supernets/AV-MNIST/supernet_avmnist_sound.pth.tar
+hw_lut_path: None
+fusion_lut: None
+evo_search_outer:
+    parent_popu_size: 8
+    survival_ratio: 0.5
+    mutate_size: 64
+    crossover_size: 64
+    mutate_prob: 0.4
+    crossover_prob: 0.8
+    evo_iter: 30
+evo_search_inner:
+    survival_ratio: 0.25
+fusion_epochs: 25
+C: 192
+L: 16
+multiplier: 2
+node_multiplier: 1
+num_outputs: 10
+drpt: 0.1
+num_keep_edges: 2
+arch_learning_rate: 0.0003
+arch_weight_decay: 0.001
+weight_decay: 0.0001
+eta_max: 0.0001
+eta_min: 1e-06
+Ti: 1
+Tm: 2
+parallel: False
+save: best_fusion_avmnist
+supernet_arch: ofa
+arch: supernet_dynamic_model
+exp_name: unimodal_supernet_avmnist_image
+resume:
+batch_size_per_gpu: 256
+batch_size: 256
+sandwich_rule: True
+alpha_min: -1.0
+alpha_max: 1.0
+iw_clip: 5.0
+grad_clip_value: 1.0
+augment: auto_augment_tf
+n_gpu_per_node: 8
+num_nodes: 8
+n_cpu_per_node: 32
+memory_per_node: 128g
+epochs: 50
+warmup_epochs: 5
+start_epoch: 0
+label_smoothing: 0.1
+inplace_distill: False
+bn_calibration: False
+sync_bn: False
+bn_momentum: 0
+bn_eps: 1e-5
+post_bn_calibration_batch_num: 64
+num_arch_training: 4
+data_loader_workers_per_gpu: 4
+dropout: 0.2
+drop_connect: 0.2
+drop_connect_only_last_two_stages: True
+weight_decay_weight: 0.0001
+weight_decay_bn_bias: 0.0
+optimizer:
+    method: adam
+    momentum: 0.9
+    nesterov: True
+lr_scheduler:
+    method: warmup_cosine_lr
+    base_lr: 1e-05
+    clamp_lr_percent: 0.0
+distributed: False
+distributed_val: False
+eval_only: True
+multiprocessing_distributed: True
+dataset: avmnist
+dataset_dir: /home/etri01/jy/harmonicnas/Harmonic-NAS/soundmnist/
+n_classes: 10
+drop_last: True
+task: classification
+image_resolution: 28
+sound_resolution: 20
+in_channels: 1
+print_freq: 50
+seed: 42
+resume_evo: 0
+start_evo: 0
+net: ofa_mbv3_d234_e346_k357_w1.0
+Using GPU:  0
+The search has started at : 2025-02-04-13:03:11
+Using GPU:  0
+The evolution is at iteration: 0 with population size: 8
+Before validation Evolution 0 Len Initial Backbones1: 8 Len Initial Backbones2: 8
+GPU 0, evaluated backbone :80.66666666666666
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :78.88888888888889
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :78.22222222222223
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :80.0
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :75.1111111111111
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :81.11111111111111
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :85.55555555555556
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :83.33333333333334
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :37.55555555555555
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :40.88888888888889
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :40.88888888888889
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :40.666666666666664
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :40.666666666666664
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :40.22222222222222
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :40.88888888888889
+Single GPU detected: skipping reduce operation.
+GPU 0, evaluated backbone :38.44444444444444
+Single GPU detected: skipping reduce operation.
+Evolution 0 Len Initial Backbones1: 8 Len Initial Backbones2: 8
+
+Compiled modules for significant speedup can not be used!
+https://pymoo.org/installation.html#installation
+
+To disable this warning:
+from pymoo.configuration import Configuration
+Configuration.show_compile_hint = False
+Traceback (most recent call last):
+  File "search_algo_avmnist.py", line 376, in <module>
+    eval_worker(args.gpu, 1, args)  # ngpus_per_node를 1로 설정
+  File "search_algo_avmnist.py", line 165, in eval_worker
+    log_wandb()
+TypeError: log_wandb() missing 5 required positional arguments: 'evo_outer', 'backbones1', 'backbones2', 'parent_ooe_popu', and 'args'

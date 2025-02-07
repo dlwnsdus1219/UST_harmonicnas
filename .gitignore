@@ -1,0 +1,16 @@
+# soundmnist 디렉토리 제외
+soundmnist/
+
+# 파이썬 캐시 파일 제외
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter Notebook 체크포인트 제외
+.ipynb_checkpoints/
+
+# 데이터셋 zip 파일 제외 (필요할 경우)
+*.zip
+saved_supernets/MM-IMDB/supernet_imdb_image.pth.tar
+saved_supernets/
+saved_supernets/

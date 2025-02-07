@@ -1,0 +1,16 @@
+{"time":"2025-02-05T11:33:03.089330136+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.5","symlink path":"/home/etri01/jy/harmonicnas/HNAS_AVMNIST/wandb_tutorial/wandb/run-20250205_113302-6w3nrixg/logs/debug-core.log"}
+{"time":"2025-02-05T11:33:03.192098564+09:00","level":"INFO","msg":"created new stream","id":"6w3nrixg"}
+{"time":"2025-02-05T11:33:03.192120078+09:00","level":"INFO","msg":"stream: started","id":"6w3nrixg"}
+{"time":"2025-02-05T11:33:03.192138088+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"6w3nrixg"}
+{"time":"2025-02-05T11:33:03.192139164+09:00","level":"INFO","msg":"handler: started","stream_id":"6w3nrixg"}
+{"time":"2025-02-05T11:33:03.192179516+09:00","level":"INFO","msg":"sender: started","stream_id":"6w3nrixg"}
+{"time":"2025-02-05T11:33:03.486761966+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-05T11:33:45.230672032+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-05T11:33:45.231092597+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-05T11:33:45.988063323+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-05T11:33:46.190947701+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 4-5, summary, console lines 2-2","runtime_seconds":0.202729138}],"total_operations":1}}
+{"time":"2025-02-05T11:33:47.237872764+09:00","level":"INFO","msg":"stream: closing","id":"6w3nrixg"}
+{"time":"2025-02-05T11:33:47.237888175+09:00","level":"INFO","msg":"handler: closed","stream_id":"6w3nrixg"}
+{"time":"2025-02-05T11:33:47.237895205+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"6w3nrixg"}
+{"time":"2025-02-05T11:33:47.237901361+09:00","level":"INFO","msg":"sender: closed","stream_id":"6w3nrixg"}
+{"time":"2025-02-05T11:33:47.237933953+09:00","level":"INFO","msg":"stream: closed","id":"6w3nrixg"}

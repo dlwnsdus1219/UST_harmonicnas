@@ -1,0 +1,3 @@
+Epoch 1/3, Train Loss: 1193.0740, Val Loss: 1333.4029
+Epoch 2/3, Train Loss: 1675.2831, Val Loss: 1224.9210
+Epoch 3/3, Train Loss: 1175.6918, Val Loss: 1091.2545

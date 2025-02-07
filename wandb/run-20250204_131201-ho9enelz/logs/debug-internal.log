@@ -1,0 +1,16 @@
+{"time":"2025-02-04T13:12:01.855279282+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.5","symlink path":"/home/etri01/jy/harmonicnas/HNAS_AVMNIST/wandb/run-20250204_131201-ho9enelz/logs/debug-core.log"}
+{"time":"2025-02-04T13:12:01.958602422+09:00","level":"INFO","msg":"created new stream","id":"ho9enelz"}
+{"time":"2025-02-04T13:12:01.95861988+09:00","level":"INFO","msg":"stream: started","id":"ho9enelz"}
+{"time":"2025-02-04T13:12:01.958637161+09:00","level":"INFO","msg":"handler: started","stream_id":"ho9enelz"}
+{"time":"2025-02-04T13:12:01.958637835+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"ho9enelz"}
+{"time":"2025-02-04T13:12:01.958674127+09:00","level":"INFO","msg":"sender: started","stream_id":"ho9enelz"}
+{"time":"2025-02-04T13:12:02.296828158+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-04T13:13:48.521529754+09:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/junylee00-chonnam-national-university/search_algo_harmnas/ho9enelz/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-02-04T13:14:26.244196503+09:00","level":"INFO","msg":"stream: closing","id":"ho9enelz"}
+{"time":"2025-02-04T13:14:26.244213607+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-04T13:14:26.2445733+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-04T13:14:27.010312879+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-04T13:14:27.268350321+09:00","level":"INFO","msg":"handler: closed","stream_id":"ho9enelz"}
+{"time":"2025-02-04T13:14:27.268382264+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ho9enelz"}
+{"time":"2025-02-04T13:14:27.268387029+09:00","level":"INFO","msg":"sender: closed","stream_id":"ho9enelz"}
+{"time":"2025-02-04T13:14:27.268435742+09:00","level":"INFO","msg":"stream: closed","id":"ho9enelz"}

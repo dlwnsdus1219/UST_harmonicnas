@@ -1,0 +1,5 @@
+Epoch 1/5, Train Loss: 2.4231, Val Loss: 2.3456
+Epoch 2/5, Train Loss: 2.1029, Val Loss: 3.5336
+Epoch 3/5, Train Loss: 2.2744, Val Loss: 2.5190
+Epoch 4/5, Train Loss: 2.5382, Val Loss: 2.4774
+Epoch 5/5, Train Loss: 2.2992, Val Loss: 2.3108

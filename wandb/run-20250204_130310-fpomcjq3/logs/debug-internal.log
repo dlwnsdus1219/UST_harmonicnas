@@ -1,0 +1,15 @@
+{"time":"2025-02-04T13:03:10.780875448+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.5","symlink path":"/home/etri01/jy/harmonicnas/HNAS_AVMNIST/wandb/run-20250204_130310-fpomcjq3/logs/debug-core.log"}
+{"time":"2025-02-04T13:03:10.88476104+09:00","level":"INFO","msg":"created new stream","id":"fpomcjq3"}
+{"time":"2025-02-04T13:03:10.884778566+09:00","level":"INFO","msg":"stream: started","id":"fpomcjq3"}
+{"time":"2025-02-04T13:03:10.884822816+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"fpomcjq3"}
+{"time":"2025-02-04T13:03:10.884852988+09:00","level":"INFO","msg":"handler: started","stream_id":"fpomcjq3"}
+{"time":"2025-02-04T13:03:10.884871719+09:00","level":"INFO","msg":"sender: started","stream_id":"fpomcjq3"}
+{"time":"2025-02-04T13:03:11.224562542+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-04T13:03:40.668154025+09:00","level":"INFO","msg":"stream: closing","id":"fpomcjq3"}
+{"time":"2025-02-04T13:03:40.668180807+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-04T13:03:40.669427911+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-04T13:03:41.446137841+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-04T13:03:41.721642504+09:00","level":"INFO","msg":"handler: closed","stream_id":"fpomcjq3"}
+{"time":"2025-02-04T13:03:41.721664951+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"fpomcjq3"}
+{"time":"2025-02-04T13:03:41.721676425+09:00","level":"INFO","msg":"sender: closed","stream_id":"fpomcjq3"}
+{"time":"2025-02-04T13:03:41.721717326+09:00","level":"INFO","msg":"stream: closed","id":"fpomcjq3"}

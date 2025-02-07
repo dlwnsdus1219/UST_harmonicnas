@@ -1,0 +1,14 @@
+wandb_version: 1
+
+batch_size:
+  value: 32
+learning_rate:
+  value: 0.027367000331281335
+momentum:
+  value: 0
+n_epochs:
+  value: 3
+optimizer:
+  value: adam
+weight_decay:
+  value: 0

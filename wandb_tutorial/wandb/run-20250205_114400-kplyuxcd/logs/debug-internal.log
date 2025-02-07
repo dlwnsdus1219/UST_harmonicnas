@@ -1,0 +1,16 @@
+{"time":"2025-02-05T11:44:00.679537005+09:00","level":"INFO","msg":"stream: starting","core version":"0.19.5","symlink path":"/home/etri01/jy/harmonicnas/HNAS_AVMNIST/wandb_tutorial/wandb/run-20250205_114400-kplyuxcd/logs/debug-core.log"}
+{"time":"2025-02-05T11:44:00.783781628+09:00","level":"INFO","msg":"created new stream","id":"kplyuxcd"}
+{"time":"2025-02-05T11:44:00.783806396+09:00","level":"INFO","msg":"stream: started","id":"kplyuxcd"}
+{"time":"2025-02-05T11:44:00.783820331+09:00","level":"INFO","msg":"handler: started","stream_id":"kplyuxcd"}
+{"time":"2025-02-05T11:44:00.78384214+09:00","level":"INFO","msg":"sender: started","stream_id":"kplyuxcd"}
+{"time":"2025-02-05T11:44:00.783843156+09:00","level":"INFO","msg":"writer: Do: started","stream_id":"kplyuxcd"}
+{"time":"2025-02-05T11:44:01.065435571+09:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-05T11:44:36.236895991+09:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-05T11:44:36.237400448+09:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-05T11:44:37.236886669+09:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.258362968,"progress":"782B/782B"}],"total_operations":1}}
+{"time":"2025-02-05T11:44:37.25665689+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-05T11:44:38.5364221+09:00","level":"INFO","msg":"stream: closing","id":"kplyuxcd"}
+{"time":"2025-02-05T11:44:38.536436353+09:00","level":"INFO","msg":"handler: closed","stream_id":"kplyuxcd"}
+{"time":"2025-02-05T11:44:38.536442815+09:00","level":"INFO","msg":"writer: Close: closed","stream_id":"kplyuxcd"}
+{"time":"2025-02-05T11:44:38.536446651+09:00","level":"INFO","msg":"sender: closed","stream_id":"kplyuxcd"}
+{"time":"2025-02-05T11:44:38.536478042+09:00","level":"INFO","msg":"stream: closed","id":"kplyuxcd"}
