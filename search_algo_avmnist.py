@@ -6,6 +6,9 @@ import pickle   # 객체 직렬화 및 역직렬화
 
 from utils.wandb_utils import init_wandb
 from utils.wandb_utils import log_wandb
+from utils.wandb_sweep import create_sweep, run_sweep
+
+import utils.wandb_sweep
 
 import torch
 import torch.distributed as dist
@@ -333,8 +336,36 @@ def eval_worker(gpu, ngpus_per_node, args):
         
 if __name__ == '__main__':
     # Sweep용 설정 파일 지정
-    project_name = 'search_algo_harmnas'
+    project_name = 'search_algo_harmnas_with_sweep'
+    entity='junylee00-chonnam-national-university'
     config_path = './configs/search_config_avmnist.yml' 
+
+    # Sweep 설정 정의하기
+    sweep_config = {
+        'method': 'bayes',
+        'metric': {'name': 'test_accuracy', 'goal': 'maximize'},
+        'parameters': {
+            ## 진화 알고리즘 관련 파라미터
+            'evo_parent_popu_size': {'values': [6, 8, 10]},
+            "evo_survival_ratio": {"values": [0.3, 0.5, 0.7]},
+            "evo_mutate_size": {"values": [32, 64, 128]},
+            "evo_crossover_size": {"values": [32, 64, 128]},
+            "evo_mutate_prob": {"values": [0.2, 0.3, 0.4]},
+            "evo_crossover_prob": {"values": [0.7, 0.8, 0.9]},
+            "evo_iter": {"values": [30, 40, 50]},
+
+            "inner_survival_ratio": {"values": [0.2, 0.25, 0.3]},
+            ## 모델 학습 관련 파라미터
+            'arch_learning_rate': {'values': [0.001, 0.003, 0.005]},
+            'arch_weight_decay': {'values': [0.001, 0.005, 0.0001]}, 
+            'weight_decay': {'values': [0.0001, 0.0005, 0.001]},
+            'dropout': {'min': 0.2, 'max': 0.5},
+            #### 파라미터 더 이어서 써 주세요 ####
+        }
+    }
+
+    # WandB Sweep 별도로 생성
+    sweep_id = create_sweep(sweep_config, entity, project_name)
 
     # WandB 초기화 및 설정 불러오기
     wandb_config = init_wandb(project_name, config_path)
@@ -346,12 +377,12 @@ if __name__ == '__main__':
 
     print(f"Updated Config: {args}")
 
-    # # wandb_config 에 있는 값만 기존 args에 덮어쓰기
-    # for key, value in wandb_config.items():
-    #     if hasattr(args, key):  # 기존 args에 있는 키만 업데이트
-    #         setattr(args, key, value)
+    # wandb_config 에 있는 값만 기존 args에 덮어쓰기
+    for key, value in wandb_config.items():
+        if hasattr(args, key):  # 기존 args에 있는 키만 업데이트
+            setattr(args, key, value)
 
-    # print(f"Updated Config for Sweep: {args}")
+    print(f"Updated Config for Sweep: {args}")
 
 
     # GPU 설정
@@ -365,5 +396,8 @@ if __name__ == '__main__':
 
     print("The search has started at :", datetime.now().strftime('%Y-%m-%d-%H:%M:%S'))
 
-    # 단일 GPU로 eval_worker 실행
-    eval_worker(args.gpu, 1, args)  # ngpus_per_node를 1로 설정
+    # # 단일 GPU로 eval_worker 실행
+    # eval_worker(args.gpu, 1, args)  # ngpus_per_node를 1로 설정
+
+    ## 이번에는 WandB Sweep를 wandb agent를 통해서 시행 ㄱㄱ
+    run_sweep(sweep_id, function=lambda: eval_worker(args.gpu, 1, args), count=20)
