@@ -14,3 +14,4 @@ __pycache__/
 saved_supernets/MM-IMDB/supernet_imdb_image.pth.tar
 saved_supernets/
 saved_supernets/
+wandb/

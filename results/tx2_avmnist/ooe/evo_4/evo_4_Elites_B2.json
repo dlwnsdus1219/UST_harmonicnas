@@ -1,0 +1,1 @@
+[{"ks": [7, 7, 3, 7], "e": [6, 3, 3, 4], "d": [3], "Acc@1": 38.44444444444444, "latency": 0, "energy": 0, "net_id": "net_evo_3_4", "rank": 0, "crowding": 0.0}, {"ks": [7, 7, 3, 7], "e": [6, 3, 3, 4], "d": [3], "Acc@1": 38.44444444444444, "latency": 0, "energy": 0, "net_id": "net_evo_3_7", "rank": 0, "crowding": 0.0}]

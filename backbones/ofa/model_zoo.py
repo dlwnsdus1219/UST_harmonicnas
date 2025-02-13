@@ -25,6 +25,7 @@ __all__ = [
 
 
 def ofa_specialized(net_id, pretrained=True):
+    """특수화된 OFA Network 불러오기"""
     # url_base = "https://hanlab.mit.edu/files/OnceForAll/ofa_specialized/"(다시 쓸수도)
     url_base = "https://raw.githubusercontent.com/han-cai/files/master/ofa/ofa_specialized/"
     net_config = json.load(

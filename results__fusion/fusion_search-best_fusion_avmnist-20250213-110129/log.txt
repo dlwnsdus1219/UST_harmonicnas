@@ -1,0 +1,281 @@
+2025-02-13 11:01:29,077 Epoch: 0
+2025-02-13 11:01:29,077 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:01:29,078 Architecture Learning Rate: 0.0003
+2025-02-13 11:01:32,646 train Loss: 1.4615, macro Acc: 0.1689
+2025-02-13 11:01:32,649 Fusion Model Params: 4209792
+2025-02-13 11:01:32,652 Genotype(edges=[('skip', 3), ('skip', 4), ('skip', 1), ('skip', 6), ('skip', 0), ('skip', 4)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 1), ('skip', 2)], inner_steps=['ScaleDotAttn', 'Sum', 'CatConvMish', 'Sum'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 2), ('skip', 4)], inner_steps=['Sum', 'SE1', 'CatConvMish', 'SE1'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2)], inner_steps=['ScaleDotAttn', 'Sum', 'LinearGLU', 'ConcatFC'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:34,397 test Loss: 1.4639, macro Acc: 0.2778
+2025-02-13 11:01:34,401 Fusion Model Params: 4209792
+2025-02-13 11:01:34,403 Genotype(edges=[('skip', 3), ('skip', 5), ('skip', 5), ('skip', 6), ('skip', 0), ('skip', 4)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 0), ('skip', 1), ('skip', 2), ('skip', 1), ('skip', 1), ('skip', 2)], inner_steps=['ScaleDotAttn', 'Sum', 'SE1', 'Sum'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 1), ('skip', 2), ('skip', 2), ('skip', 4)], inner_steps=['Sum', 'SE1', 'CatConvMish', 'ConcatFC'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 2), ('skip', 1)], inner_steps=['LinearGLU', 'Sum', 'Sum', 'ConcatFC'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:34,533 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:01:34,533 Current best test macro F1: 0.2777777777777778, at training epoch: 0
+2025-02-13 11:01:34,534 Epoch: 1
+2025-02-13 11:01:34,534 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:01:34,534 Architecture Learning Rate: 0.0003
+2025-02-13 11:01:37,094 train Loss: 1.4201, macro Acc: 0.2930
+2025-02-13 11:01:37,097 Fusion Model Params: 4209792
+2025-02-13 11:01:37,100 Genotype(edges=[('skip', 3), ('skip', 5), ('skip', 5), ('skip', 6), ('skip', 0), ('skip', 4)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 0), ('skip', 1), ('skip', 2), ('skip', 1), ('skip', 1), ('skip', 2)], inner_steps=['ScaleDotAttn', 'Sum', 'SE1', 'Sum'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 1), ('skip', 2), ('skip', 2), ('skip', 4)], inner_steps=['Sum', 'SE1', 'CatConvMish', 'ConcatFC'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 2), ('skip', 1)], inner_steps=['LinearGLU', 'Sum', 'Sum', 'ConcatFC'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:38,144 test Loss: 1.4251, macro Acc: 0.3711
+2025-02-13 11:01:38,147 Fusion Model Params: 4209792
+2025-02-13 11:01:38,150 Genotype(edges=[('skip', 3), ('skip', 5), ('skip', 5), ('skip', 6), ('skip', 3), ('skip', 4)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 0), ('skip', 2), ('skip', 2), ('skip', 1), ('skip', 1), ('skip', 4)], inner_steps=['ScaleDotAttn', 'ConcatFC', 'SE1', 'Sum'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'SE1', 'CatConvMish', 'ConcatFC'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 0), ('skip', 2), ('skip', 2), ('skip', 1)], inner_steps=['LinearGLU', 'Sum', 'Sum', 'ConcatFC'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:38,318 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:01:38,319 Current best test macro F1: 0.3711111111111111, at training epoch: 1
+2025-02-13 11:01:38,319 Epoch: 2
+2025-02-13 11:01:38,320 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:01:38,320 Architecture Learning Rate: 0.0003
+2025-02-13 11:01:40,750 train Loss: 1.3566, macro Acc: 0.4688
+2025-02-13 11:01:40,753 Fusion Model Params: 4209792
+2025-02-13 11:01:40,756 Genotype(edges=[('skip', 3), ('skip', 5), ('skip', 5), ('skip', 6), ('skip', 3), ('skip', 4)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 0), ('skip', 2), ('skip', 2), ('skip', 1), ('skip', 1), ('skip', 4)], inner_steps=['ScaleDotAttn', 'ConcatFC', 'SE1', 'Sum'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'SE1', 'CatConvMish', 'ConcatFC'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 0), ('skip', 2), ('skip', 2), ('skip', 1)], inner_steps=['LinearGLU', 'Sum', 'Sum', 'ConcatFC'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:41,744 test Loss: 1.3495, macro Acc: 0.5511
+2025-02-13 11:01:41,747 Fusion Model Params: 4209792
+2025-02-13 11:01:41,750 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 6), ('skip', 3), ('skip', 4)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 1), ('skip', 4)], inner_steps=['LinearGLU', 'ConcatFC', 'SE1', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'SE1', 'LinearGLU', 'ConcatFC'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 0), ('skip', 2), ('skip', 2), ('skip', 1)], inner_steps=['LinearGLU', 'Sum', 'Sum', 'ConcatFC'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:41,913 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:01:41,913 Current best test macro F1: 0.5511111111111111, at training epoch: 2
+2025-02-13 11:01:41,914 Epoch: 3
+2025-02-13 11:01:41,914 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:01:41,914 Architecture Learning Rate: 0.0003
+2025-02-13 11:01:44,612 train Loss: 1.3212, macro Acc: 0.5322
+2025-02-13 11:01:44,616 Fusion Model Params: 4209792
+2025-02-13 11:01:44,619 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 6), ('skip', 3), ('skip', 4)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 1), ('skip', 4)], inner_steps=['LinearGLU', 'ConcatFC', 'SE1', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'SE1', 'LinearGLU', 'ConcatFC'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 0), ('skip', 2), ('skip', 2), ('skip', 1)], inner_steps=['LinearGLU', 'Sum', 'Sum', 'ConcatFC'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:45,641 test Loss: 1.3137, macro Acc: 0.6244
+2025-02-13 11:01:45,645 Fusion Model Params: 4209792
+2025-02-13 11:01:45,647 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 3), ('skip', 4)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 1), ('skip', 4)], inner_steps=['LinearGLU', 'ConcatFC', 'SE1', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'SE1', 'LinearGLU', 'CatConvMish'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 0), ('skip', 2), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'Sum', 'SE1', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:45,805 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:01:45,806 Current best test macro F1: 0.6244444444444445, at training epoch: 3
+2025-02-13 11:01:45,806 Epoch: 4
+2025-02-13 11:01:45,806 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:01:45,807 Architecture Learning Rate: 0.0003
+2025-02-13 11:01:48,460 train Loss: 1.2632, macro Acc: 0.6270
+2025-02-13 11:01:48,463 Fusion Model Params: 4209792
+2025-02-13 11:01:48,466 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 3), ('skip', 4)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 1), ('skip', 4)], inner_steps=['LinearGLU', 'ConcatFC', 'SE1', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'SE1', 'LinearGLU', 'CatConvMish'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 0), ('skip', 2), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'Sum', 'SE1', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:49,497 test Loss: 1.2451, macro Acc: 0.7022
+2025-02-13 11:01:49,500 Fusion Model Params: 4209792
+2025-02-13 11:01:49,502 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'ConcatFC', 'SE1', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'SE1', 'LinearGLU', 'CatConvMish'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:49,656 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:01:49,657 Current best test macro F1: 0.7022222222222222, at training epoch: 4
+2025-02-13 11:01:49,657 Epoch: 5
+2025-02-13 11:01:49,657 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:01:49,657 Architecture Learning Rate: 0.0003
+2025-02-13 11:01:52,392 train Loss: 1.2235, macro Acc: 0.6875
+2025-02-13 11:01:52,395 Fusion Model Params: 4209792
+2025-02-13 11:01:52,398 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'ConcatFC', 'SE1', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'SE1', 'LinearGLU', 'CatConvMish'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:53,393 test Loss: 1.2146, macro Acc: 0.7489
+2025-02-13 11:01:53,397 Fusion Model Params: 4209792
+2025-02-13 11:01:53,399 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'ConcatFC', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'CatConvMish'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:53,557 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:01:53,557 Current best test macro F1: 0.7488888888888889, at training epoch: 5
+2025-02-13 11:01:53,558 Epoch: 6
+2025-02-13 11:01:53,558 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:01:53,558 Architecture Learning Rate: 0.0003
+2025-02-13 11:01:56,209 train Loss: 1.1843, macro Acc: 0.7080
+2025-02-13 11:01:56,215 Fusion Model Params: 4209792
+2025-02-13 11:01:56,219 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'ConcatFC', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'CatConvMish'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:57,242 test Loss: 1.1421, macro Acc: 0.7756
+2025-02-13 11:01:57,245 Fusion Model Params: 4209792
+2025-02-13 11:01:57,248 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:01:57,401 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:01:57,402 Current best test macro F1: 0.7755555555555556, at training epoch: 6
+2025-02-13 11:01:57,402 Epoch: 7
+2025-02-13 11:01:57,402 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:01:57,403 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:00,086 train Loss: 1.1386, macro Acc: 0.7432
+2025-02-13 11:02:00,089 Fusion Model Params: 4209792
+2025-02-13 11:02:00,092 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:01,102 test Loss: 1.1228, macro Acc: 0.8089
+2025-02-13 11:02:01,106 Fusion Model Params: 4209792
+2025-02-13 11:02:01,108 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:01,280 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:01,280 Current best test macro F1: 0.8088888888888889, at training epoch: 7
+2025-02-13 11:02:01,281 Epoch: 8
+2025-02-13 11:02:01,281 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:01,281 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:04,010 train Loss: 1.1033, macro Acc: 0.7471
+2025-02-13 11:02:04,013 Fusion Model Params: 4209792
+2025-02-13 11:02:04,015 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:05,043 test Loss: 1.0537, macro Acc: 0.8200
+2025-02-13 11:02:05,048 Fusion Model Params: 4209792
+2025-02-13 11:02:05,051 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:05,219 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:05,219 Current best test macro F1: 0.82, at training epoch: 8
+2025-02-13 11:02:05,220 Epoch: 9
+2025-02-13 11:02:05,220 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:05,220 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:07,717 train Loss: 1.0747, macro Acc: 0.7617
+2025-02-13 11:02:07,720 Fusion Model Params: 4209792
+2025-02-13 11:02:07,723 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:08,711 test Loss: 1.0398, macro Acc: 0.8289
+2025-02-13 11:02:08,714 Fusion Model Params: 4209792
+2025-02-13 11:02:08,716 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:08,876 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:08,876 Current best test macro F1: 0.8288888888888889, at training epoch: 9
+2025-02-13 11:02:08,877 Epoch: 10
+2025-02-13 11:02:08,877 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:08,877 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:11,573 train Loss: 1.0482, macro Acc: 0.7695
+2025-02-13 11:02:11,578 Fusion Model Params: 4209792
+2025-02-13 11:02:11,581 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:12,575 test Loss: 0.9827, macro Acc: 0.8467
+2025-02-13 11:02:12,579 Fusion Model Params: 4209792
+2025-02-13 11:02:12,582 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:12,744 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:12,745 Current best test macro F1: 0.8466666666666667, at training epoch: 10
+2025-02-13 11:02:12,745 Epoch: 11
+2025-02-13 11:02:12,745 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:12,746 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:15,388 train Loss: 0.9863, macro Acc: 0.8057
+2025-02-13 11:02:15,392 Fusion Model Params: 4209792
+2025-02-13 11:02:15,395 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:16,502 test Loss: 0.9676, macro Acc: 0.8489
+2025-02-13 11:02:16,507 Fusion Model Params: 4209792
+2025-02-13 11:02:16,510 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:16,668 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:16,668 Current best test macro F1: 0.8488888888888889, at training epoch: 11
+2025-02-13 11:02:16,669 Epoch: 12
+2025-02-13 11:02:16,669 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:16,669 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:19,367 train Loss: 0.9581, macro Acc: 0.8115
+2025-02-13 11:02:19,370 Fusion Model Params: 4209792
+2025-02-13 11:02:19,373 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:20,395 test Loss: 0.9125, macro Acc: 0.8644
+2025-02-13 11:02:20,398 Fusion Model Params: 4209792
+2025-02-13 11:02:20,401 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:20,562 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:20,562 Current best test macro F1: 0.8644444444444445, at training epoch: 12
+2025-02-13 11:02:20,562 Epoch: 13
+2025-02-13 11:02:20,563 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:20,563 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:23,357 train Loss: 0.9497, macro Acc: 0.7959
+2025-02-13 11:02:23,360 Fusion Model Params: 4209792
+2025-02-13 11:02:23,363 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:24,373 test Loss: 0.9039, macro Acc: 0.8689
+2025-02-13 11:02:24,377 Fusion Model Params: 4209792
+2025-02-13 11:02:24,380 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:24,536 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:24,537 Current best test macro F1: 0.8688888888888889, at training epoch: 13
+2025-02-13 11:02:24,537 Epoch: 14
+2025-02-13 11:02:24,537 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:24,538 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:27,264 train Loss: 0.9298, macro Acc: 0.8027
+2025-02-13 11:02:27,267 Fusion Model Params: 4209792
+2025-02-13 11:02:27,270 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:28,299 test Loss: 0.8530, macro Acc: 0.8800
+2025-02-13 11:02:28,306 Fusion Model Params: 4209792
+2025-02-13 11:02:28,311 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:28,502 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:28,503 Current best test macro F1: 0.88, at training epoch: 14
+2025-02-13 11:02:28,503 Epoch: 15
+2025-02-13 11:02:28,503 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:28,504 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:31,177 train Loss: 0.8921, macro Acc: 0.8213
+2025-02-13 11:02:31,182 Fusion Model Params: 4209792
+2025-02-13 11:02:31,185 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'CatConvMish'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:32,234 test Loss: 0.8447, macro Acc: 0.8911
+2025-02-13 11:02:32,237 Fusion Model Params: 4209792
+2025-02-13 11:02:32,241 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:32,406 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:32,407 Current best test macro F1: 0.8911111111111111, at training epoch: 15
+2025-02-13 11:02:32,407 Epoch: 16
+2025-02-13 11:02:32,407 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:32,408 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:35,117 train Loss: 0.8822, macro Acc: 0.8164
+2025-02-13 11:02:35,120 Fusion Model Params: 4209792
+2025-02-13 11:02:35,122 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 3), ('skip', 7), ('skip', 1), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:36,128 test Loss: 0.7996, macro Acc: 0.9000
+2025-02-13 11:02:36,131 Fusion Model Params: 4209792
+2025-02-13 11:02:36,134 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:36,299 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:36,300 Current best test macro F1: 0.9, at training epoch: 16
+2025-02-13 11:02:36,300 Epoch: 17
+2025-02-13 11:02:36,300 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:36,300 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:39,236 train Loss: 0.8658, macro Acc: 0.8174
+2025-02-13 11:02:39,239 Fusion Model Params: 4209792
+2025-02-13 11:02:39,242 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:40,239 test Loss: 0.7887, macro Acc: 0.9067
+2025-02-13 11:02:40,244 Fusion Model Params: 4209792
+2025-02-13 11:02:40,247 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:40,438 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:40,438 Current best test macro F1: 0.9066666666666666, at training epoch: 17
+2025-02-13 11:02:40,438 Epoch: 18
+2025-02-13 11:02:40,439 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:40,439 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:42,732 train Loss: 0.8516, macro Acc: 0.8311
+2025-02-13 11:02:42,736 Fusion Model Params: 4209792
+2025-02-13 11:02:42,739 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:43,718 test Loss: 0.7611, macro Acc: 0.9022
+2025-02-13 11:02:43,723 Fusion Model Params: 4209792
+2025-02-13 11:02:43,726 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:43,798 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:43,798 Current best test macro F1: 0.9066666666666666, at training epoch: 17
+2025-02-13 11:02:43,799 Epoch: 19
+2025-02-13 11:02:43,799 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:43,799 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:46,122 train Loss: 0.8000, macro Acc: 0.8594
+2025-02-13 11:02:46,126 Fusion Model Params: 4209792
+2025-02-13 11:02:46,128 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:47,146 test Loss: 0.7573, macro Acc: 0.8911
+2025-02-13 11:02:47,149 Fusion Model Params: 4209792
+2025-02-13 11:02:47,152 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:47,229 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:47,229 Current best test macro F1: 0.9066666666666666, at training epoch: 17
+2025-02-13 11:02:47,230 Epoch: 20
+2025-02-13 11:02:47,230 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:47,230 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:49,823 train Loss: 0.8312, macro Acc: 0.8193
+2025-02-13 11:02:49,826 Fusion Model Params: 4209792
+2025-02-13 11:02:49,829 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:50,850 test Loss: 0.7166, macro Acc: 0.9267
+2025-02-13 11:02:50,853 Fusion Model Params: 4209792
+2025-02-13 11:02:50,857 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:51,011 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:51,012 Current best test macro F1: 0.9266666666666666, at training epoch: 20
+2025-02-13 11:02:51,012 Epoch: 21
+2025-02-13 11:02:51,012 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:51,012 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:53,385 train Loss: 0.7999, macro Acc: 0.8447
+2025-02-13 11:02:53,389 Fusion Model Params: 4209792
+2025-02-13 11:02:53,391 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:54,368 test Loss: 0.7123, macro Acc: 0.9178
+2025-02-13 11:02:54,371 Fusion Model Params: 4209792
+2025-02-13 11:02:54,374 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:54,444 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:54,445 Current best test macro F1: 0.9266666666666666, at training epoch: 20
+2025-02-13 11:02:54,445 Epoch: 22
+2025-02-13 11:02:54,445 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:54,445 Architecture Learning Rate: 0.0003
+2025-02-13 11:02:56,951 train Loss: 0.7887, macro Acc: 0.8438
+2025-02-13 11:02:56,955 Fusion Model Params: 4209792
+2025-02-13 11:02:56,957 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:57,945 test Loss: 0.6870, macro Acc: 0.9244
+2025-02-13 11:02:57,950 Fusion Model Params: 4209792
+2025-02-13 11:02:57,952 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:02:58,024 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:02:58,025 Current best test macro F1: 0.9266666666666666, at training epoch: 20
+2025-02-13 11:02:58,025 Epoch: 23
+2025-02-13 11:02:58,025 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:02:58,026 Architecture Learning Rate: 0.0003
+2025-02-13 11:03:00,799 train Loss: 0.7716, macro Acc: 0.8525
+2025-02-13 11:03:00,803 Fusion Model Params: 4209792
+2025-02-13 11:03:00,806 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:03:01,836 test Loss: 0.6847, macro Acc: 0.9156
+2025-02-13 11:03:01,840 Fusion Model Params: 4209792
+2025-02-13 11:03:01,842 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:03:01,914 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:03:01,914 Current best test macro F1: 0.9266666666666666, at training epoch: 20
+2025-02-13 11:03:01,915 Epoch: 24
+2025-02-13 11:03:01,915 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-110129
+2025-02-13 11:03:01,915 Architecture Learning Rate: 0.0003
+2025-02-13 11:03:04,746 train Loss: 0.7706, macro Acc: 0.8447
+2025-02-13 11:03:04,749 Fusion Model Params: 4209792
+2025-02-13 11:03:04,751 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:03:05,731 test Loss: 0.6626, macro Acc: 0.9244
+2025-02-13 11:03:05,734 Fusion Model Params: 4209792
+2025-02-13 11:03:05,737 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:03:05,808 Current best dev macro F1: 0.0, at training epoch: 0
+2025-02-13 11:03:05,808 Current best test macro F1: 0.9266666666666666, at training epoch: 20
+2025-02-13 11:03:05,809 **************************************************
+2025-02-13 11:03:05,809 Searching complete in 1m 37s
+2025-02-13 11:03:05,809 Now listing best fusion_net genotype:
+2025-02-13 11:03:05,810 Genotype(edges=[('skip', 2), ('skip', 3), ('skip', 1), ('skip', 3), ('skip', 0), ('skip', 3)], steps=[StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 3), ('skip', 4)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 0), ('skip', 1), ('skip', 2), ('skip', 0), ('skip', 2), ('skip', 3), ('skip', 4), ('skip', 2)], inner_steps=['CatConvMish', 'LinearGLU', 'LinearGLU', 'LinearGLU'], inner_concat=[5]), StepGenotype(inner_edges=[('skip', 1), ('skip', 0), ('skip', 2), ('skip', 1), ('skip', 2), ('skip', 3), ('skip', 2), ('skip', 3)], inner_steps=['LinearGLU', 'CatConvMish', 'LinearGLU', 'LinearGLU'], inner_concat=[5])], concat=[9, 10])
+2025-02-13 11:03:05,810 Now listing best f1 :
+2025-02-13 11:03:05,810 0.9266666666666666

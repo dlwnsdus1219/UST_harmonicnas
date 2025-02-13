@@ -1,0 +1,163 @@
+digraph {
+	node [align=center fontname=helvetica fontsize=20 height=0.5 penwidth=2 shape=rect style="rounded, filled" width=0.5]
+	edge [fontname=times fontsize=20 penwidth=1.5]
+	rankdir=LR
+	{
+	}
+	{
+		node [shape=box]
+		rankdir=BT
+		rank=same
+		Image_1 -> Image_2
+		Image_2 -> Image_3
+		Image_3 -> Image_4
+		subgraph cluster_video_features {
+			node [shape=box]
+			align=center color=lightgrey fontsize=20 style="rounded, filled"
+			Image_1 [fillcolor=lightskyblue1]
+			Image_2 [fillcolor=lightskyblue1]
+			Image_3 [fillcolor=lightskyblue1]
+			Image_4 [fillcolor=lightskyblue1]
+		}
+		Audio_1 -> Audio_2
+		Audio_2 -> Audio_3
+		Audio_3 -> Audio_4
+		subgraph cluster_skeleton_features {
+			node [shape=box]
+			align=center color=lightgrey fontsize=20 style="rounded, filled"
+			Audio_1 [fillcolor=darkolivegreen1]
+			Audio_2 [fillcolor=darkolivegreen1]
+			Audio_3 [fillcolor=darkolivegreen1]
+			Audio_4 [fillcolor=darkolivegreen1]
+		}
+		Image_4 -> Audio_1 [style=invis]
+	}
+	subgraph cluster_step_0 {
+		node [shape=box style="rounded, filled"]
+		align=center color=tan1 fontsize=20 style="rounded, filled"
+		{
+			"C1_S1
+LinearGLU" [fillcolor=khaki1]
+			"C1_S2
+ConcatFC" [fillcolor=khaki1]
+			"C1_S3
+SE1" [fillcolor=khaki1]
+			"C1_S4
+LinearGLU" [fillcolor=khaki1]
+		}
+		X_C1 [fillcolor=maroon2]
+		Y_C1 [fillcolor=green3]
+		Z_C1 [fillcolor=purple]
+		X_C1 -> "C1_S1
+LinearGLU"
+		Y_C1 -> "C1_S1
+LinearGLU"
+		"C1_S1
+LinearGLU" -> "C1_S2
+ConcatFC"
+		X_C1 -> "C1_S2
+ConcatFC"
+		"C1_S1
+LinearGLU" -> "C1_S3
+SE1"
+		"C1_S2
+ConcatFC" -> "C1_S3
+SE1"
+		Y_C1 -> "C1_S4
+LinearGLU"
+		"C1_S3
+SE1" -> "C1_S4
+LinearGLU"
+		"C1_S4
+LinearGLU" -> Z_C1
+	}
+	Image_3 -> X_C1 [color=blue]
+	Image_4 -> Y_C1 [color=blue]
+	subgraph cluster_step_1 {
+		node [shape=box style="rounded, filled"]
+		align=center color=tan1 fontsize=20 style="rounded, filled"
+		{
+			"C2_S1
+CatConvMish" [fillcolor=khaki1]
+			"C2_S2
+SE1" [fillcolor=khaki1]
+			"C2_S3
+LinearGLU" [fillcolor=khaki1]
+			"C2_S4
+ConcatFC" [fillcolor=khaki1]
+		}
+		X_C2 [fillcolor=maroon2]
+		Y_C2 [fillcolor=green3]
+		Z_C2 [fillcolor=purple]
+		X_C2 -> "C2_S1
+CatConvMish"
+		Y_C2 -> "C2_S1
+CatConvMish"
+		"C2_S1
+CatConvMish" -> "C2_S2
+SE1"
+		X_C2 -> "C2_S2
+SE1"
+		"C2_S1
+CatConvMish" -> "C2_S3
+LinearGLU"
+		Y_C2 -> "C2_S3
+LinearGLU"
+		"C2_S3
+LinearGLU" -> "C2_S4
+ConcatFC"
+		"C2_S1
+CatConvMish" -> "C2_S4
+ConcatFC"
+		"C2_S4
+ConcatFC" -> Z_C2
+	}
+	Image_4 -> X_C2 [color=blue]
+	Audio_3 -> Y_C2 [color=blue]
+	subgraph cluster_step_2 {
+		node [shape=box style="rounded, filled"]
+		align=center color=tan1 fontsize=20 style="rounded, filled"
+		{
+			"C3_S1
+LinearGLU" [fillcolor=khaki1]
+			"C3_S2
+Sum" [fillcolor=khaki1]
+			"C3_S3
+Sum" [fillcolor=khaki1]
+			"C3_S4
+ConcatFC" [fillcolor=khaki1]
+		}
+		X_C3 [fillcolor=maroon2]
+		Y_C3 [fillcolor=green3]
+		Z_C3 [fillcolor=purple]
+		Y_C3 -> "C3_S1
+LinearGLU"
+		X_C3 -> "C3_S1
+LinearGLU"
+		"C3_S1
+LinearGLU" -> "C3_S2
+Sum"
+		Y_C3 -> "C3_S2
+Sum"
+		X_C3 -> "C3_S3
+Sum"
+		"C3_S1
+LinearGLU" -> "C3_S3
+Sum"
+		"C3_S1
+LinearGLU" -> "C3_S4
+ConcatFC"
+		Y_C3 -> "C3_S4
+ConcatFC"
+		"C3_S4
+ConcatFC" -> Z_C3
+	}
+	Image_4 -> X_C3 [color=blue]
+	Audio_1 -> Y_C3 [color=blue]
+	"Reduction
+Output" [fillcolor=grey91]
+	Z_C2 -> "Reduction
+Output" [color=blue]
+	Z_C3 -> "Reduction
+Output" [color=blue]
+}

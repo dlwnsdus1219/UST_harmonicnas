@@ -15,11 +15,11 @@ fusion_lut: None
 ## 백본 네트워크의 탐색 담당
 evo_search_outer:
     parent_popu_size: 8
-    survival_ratio: 0.5      # 생존 개체 비율
-    mutate_size: 64
-    crossover_size: 64
-    mutate_prob: 0.4        # 변이 확률(줄여보기 ㄱㄱ)
-    crossover_prob: 0.8     # 교차 확률
+    survival_ratio: 0.7      # 생존 개체 비율
+    mutate_size: 32
+    crossover_size: 32
+    mutate_prob: 0.4841        # 변이 확률(줄여보기 ㄱㄱ)
+    crossover_prob: 0.7     # 교차 확률
     evo_iter: 30            # 진화 알고리즘 몇 번 반복?(늘려보면.....더 많은 개체를 탐색할수도..?)
 
 ## 선택된 백본 중, 상위 개체만 다시 한 번 필터링!!
@@ -31,7 +31,7 @@ evo_search_inner:
 fusion_epochs: 25       # 융합 학습은 몇 번?
 
 C : 192     # feature map 크기
-L : 16      # layer 수
+L : 25      # layer 수
 multiplier : 2      # 채널 확장 비율
 
 node_multiplier : 1     # 노드 확장 비율

@@ -126,7 +126,7 @@ def create_exp_dir(path, save_logger, save_model, plot_arch):
 
 
 def count_supernet_hardware_metrics(model, args, steps, node_steps):
-
+    """Fusion Network의 하드웨어 성능의 측정"""
     # the order of the fusion operators is as follows: 'Sum','ScaleDotAttn','LinearGLU','ConcatFC','SE1','CatConvMish' 
 
     
@@ -176,7 +176,7 @@ def count_genotype_hardware_metrics(genotype, args):
     total_lat = 0.0
     total_enrg = 0.0
     
-    if args.fusion_lut in [None, "None"]:  # ✅ LUT가 없으면 즉시 종료
+    if args.fusion_lut in [None, "None"]:  # LUT가 없으면 즉시 종료
         return {"lat": 0.0, "enrg": 0.0}
 
     # LUT 파일 로드

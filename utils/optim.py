@@ -131,25 +131,24 @@ def RankAndCrowdingSurvival_Outer(pop, normalize, n_survive, D=None):
     
     return new_pop
 
-
+## 성능 우수한 Fusion Network의 선택 함수
 def RankAndCrowdingSurvival_Outer_Acc(pop, normalize, n_survive, D=None, perfo_metric='Acc@1'):
 
     # get the objective space values and objects
     F = []
     for cfg in pop:
-        F.append([100-cfg[perfo_metric], cfg['latency'], cfg['energy']])
-
+        F.append([100-cfg[perfo_metric], cfg['latency'], cfg['energy']])        # 각 개체의 성능 지표(100-acc, lat, ener) 저장
     F = np.array(F).astype(np.float64, copy=False)
     
     # the final indices of surviving individuals
     survivors = []
 
-    # do the non-dominated sorting until splitting front
+    # do the non-dominated sorting until splitting front(비열등 해집합)
     fronts = NonDominatedSorting().do(F, n_stop_if_ranked=n_survive)
 
     for k, front in enumerate(fronts):
 
-        # calculate the crowding distance of the front
+        # calculate the crowding distance of the front(개체간 거리 계산=> 다양성 유지 ㄱㄱ)
         crowding_of_front = calc_crowding_distance(F[front, :])
 
         # save rank and crowding in the individual class
@@ -157,7 +156,7 @@ def RankAndCrowdingSurvival_Outer_Acc(pop, normalize, n_survive, D=None, perfo_m
             pop[i]["rank"] = k
             pop[i]["crowding"] = crowding_of_front[j]
 
-        # current front sorted by crowding distance if splitting
+        # current front sorted by crowding distance if splitting (Crowding Dist가 큰 개체부터 선택 ㄱㄱ)
         if len(survivors) + len(front) > n_survive:
             I = randomized_argsort(crowding_of_front, order='descending', method='numpy')
             I = I[:(n_survive - len(survivors))]
@@ -171,11 +170,11 @@ def RankAndCrowdingSurvival_Outer_Acc(pop, normalize, n_survive, D=None, perfo_m
 
     new_pop = []
     for i in survivors:
-        new_pop.append(pop[i])
+        new_pop.append(pop[i])      # 우수한 개체 집합 반환
     
     return new_pop
 
-
+## 개별 백본 네트워크 선별용 함
 def RankAndCrowdingSurvival_Inner_Acc(pop, normalize, n_survive, D=None, perfo_metric='Acc@1'):
 
     # get the objective space values and objects
@@ -183,17 +182,17 @@ def RankAndCrowdingSurvival_Inner_Acc(pop, normalize, n_survive, D=None, perfo_m
     for cfg in pop:
         F.append([100-cfg[perfo_metric], cfg['latency'], cfg['energy']])
         
-    F = np.array(F).astype(np.float64, copy=False)
+    F = np.array(F).astype(np.float64, copy=False)      # 개별 백본의 성능 지표 저장 (100-acc, lat, ener)
     
     # the final indices of surviving individuals
     survivors = []
 
-    # do the non-dominated sorting until splitting front
+    # do the non-dominated sorting until splitting front (백본들 간 Pareto 군집 생성)
     fronts = NonDominatedSorting().do(F, n_stop_if_ranked=n_survive)
 
     for k, front in enumerate(fronts):
 
-        # calculate the crowding distance of the front
+        # calculate the crowding distance of the front (Crowding Dist. 가 큰 개체부터 선택 ㄱㄱ)
         crowding_of_front = calc_crowding_distance(F[front, :])
 
         # save rank and crowding in the individual class
@@ -215,7 +214,7 @@ def RankAndCrowdingSurvival_Inner_Acc(pop, normalize, n_survive, D=None, perfo_m
 
     new_pop = []
     for i in survivors:
-        new_pop.append(pop[i])
+        new_pop.append(pop[i])      # 상위 n_survive 백본 반환!!
     
     return new_pop
 

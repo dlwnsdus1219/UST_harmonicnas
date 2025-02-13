@@ -14,7 +14,7 @@ def init_wandb(project_name, config_path):
 
     """WandB 프로젝트 초기화 & YaML 파일 로드하기"""
     wandb.init(project=project_name, 
-               name=f"exp_{datetime.now().strftime('%Y-%m-%d-%H:%M:%S')}",
+               name=f"exp_{datetime.now().strftime('%Y-%m-%d-%H:%M:%S')}",      # 개별 model 실험 이름 따로 저장 ㄱㄱ
             )
     
     # yaml 설정 로드

@@ -1,9 +1,10 @@
 import argparse
 import random
 import torch
+
 from utils.config import setup
 
-
+from utils.wandb_utils import init_wandb
 from backbones.ofa.model_zoo import ofa_net
 from backbones.ofa.utils.layers import LinearLayer, ConvLayer
 from fusion_search.train_fusion_search import train_darts_model
@@ -13,7 +14,7 @@ from evaluate.backbone_eval.efficiency import EfficiencyEstimator, look_up_ofa_p
 from data.data_loader import build_data_loader
 import os
 directory = os.path.dirname(os.path.abspath(__name__))
-directory = "../Harmonic-NAS"
+directory = "../HNAS_AVMNIST"
 exp_name = "Best_AVMNIST"
 
 
@@ -30,8 +31,6 @@ run_args = parser.parse_args()
 ## 유니모달 네트워크와 멀티모달 네트워크의 성능 평가 -> Fusion Network의 미세 아키텍쳐를 검색 ㄱㄱ
 def eval_worker(args):
         
-
-
     random.seed(args.seed)
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed(args.seed)
@@ -52,9 +51,9 @@ def eval_worker(args):
     sound_supernet.cuda(args.gpu)
 
 
-    # Load LUTs for latency/energy characterization on the targeted Edge device(각각 개별 모달리티의 지연 시간, 에너지 소비 등 평가 위한 LUT 로드)
-    lut_data_image = EfficiencyEstimator(fname=args.hw_lut_path, supernet=args.supernet_arch)
-    lut_data_sound = EfficiencyEstimator(fname=args.hw_lut_path, supernet=args.supernet_arch)
+    # # Load LUTs for latency/energy characterization on the targeted Edge device(각각 개별 모달리티의 지연 시간, 에너지 소비 등 평가 위한 LUT 로드)
+    # lut_data_image = EfficiencyEstimator(fname=args.hw_lut_path, supernet=args.supernet_arch)
+    # lut_data_sound = EfficiencyEstimator(fname=args.hw_lut_path, supernet=args.supernet_arch)
     
     # Load dataset(데이터 로드하기)
     train_loader, test_loader, train_sampler = build_data_loader(args)
@@ -63,9 +62,6 @@ def eval_worker(args):
     image_supernet.load_weights_from_pretrained_supernet(args.pretrained_path1)
     sound_supernet.load_weights_from_pretrained_supernet(args.pretrained_path2)
 
-        
-        
-        
     # Select the unimodal backbones that gave the best accuracy in the multimodal setting(서브넷 활성화)
     image_supernet.set_active_subnet(
     [3,5,7,3],      # 각 layer의 채널 수
@@ -108,8 +104,10 @@ def eval_worker(args):
     # Compute the accuracy and the latency/energy of the selected unimodal backbones(유니모달 백본의 성능 평가 with LUT)     
     acc1 = new_validate_one_subnet(test_loader, image_subnet, args, modal_num=0)
     acc2 = new_validate_one_subnet(test_loader, sound_subnet, args, modal_num=1)
-    Lat1, Enrg1 = look_up_ofa_proxy(net=image_subnet, lut=lut_data_image, resolution=args.image_resolution, supernet=args.supernet_arch, num_channels=args.in_channels)
-    Lat2, Enrg2 = look_up_ofa_proxy(net=sound_subnet, lut=lut_data_sound, resolution=args.sound_resolution, supernet=args.supernet_arch, num_channels=args.in_channels)
+    Lat1, Enrg1 = 0.0, 0.0
+    Lat2, Enrg2 = 0.0, 0.0
+    # Lat1, Enrg1 = look_up_ofa_proxy(net=image_subnet, lut=lut_data_image, resolution=args.image_resolution, supernet=args.supernet_arch, num_channels=args.in_channels)
+    # Lat2, Enrg2 = look_up_ofa_proxy(net=sound_subnet, lut=lut_data_sound, resolution=args.sound_resolution, supernet=args.supernet_arch, num_channels=args.in_channels)
     print("Unimodal Performance:")
     print("Image Backbone: Acc: {:.3f}%, Latency: {:.3f}ms, Energy: {:.3f}mJ".format(acc1, Lat1, Enrg1))
     print("Audio Backbone: Acc: {:.3f}%, Latency: {:.3f}ms, Energy: {:.3f}mJ".format(acc2, Lat2, Enrg2))
@@ -195,6 +193,11 @@ def eval_worker(args):
 
         
 if __name__ == '__main__':
+    project_name = 'best_mm_model_harmnas'
+    entity='junylee00-chonnam-national-university'
+    config_path = './configs/search_config_avmnist.yml' 
+
+    wandb_conf = init_wandb(project_name, config_path)
         
     args = setup(run_args.config_file)
     args.net = run_args.net

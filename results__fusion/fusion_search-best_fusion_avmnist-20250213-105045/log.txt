@@ -1,0 +1,3 @@
+2025-02-13 10:50:45,363 Epoch: 0
+2025-02-13 10:50:45,364 EXP: ./results__fusion/fusion_search-best_fusion_avmnist-20250213-105045
+2025-02-13 10:50:45,364 Architecture Learning Rate: 0.0003
